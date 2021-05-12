@@ -1,3 +1,4 @@
-let Server = require('./lib/server.js');
+let Server = require('./lib/server');
+let Client = require('./lib/client');
 
-module.exports = { Server };
+module.exports = { Server, Client };
