@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-let DropZoneProtocol = require('.');
+let { Server } = require('.');
 
-let dropzone = new DropZoneProtocol();
+let dropzone = new Server();
 
 let api = require('./api');
 

@@ -11,7 +11,7 @@ let { crypto_generichash, crypto_generichash_BYTES } = sodium;
 
 dotenv.config();
 
-class DropZoneProtocol {
+class Server {
   constructor(options = {}) {
     /**
      * Set variables from options
@@ -73,4 +73,4 @@ class DropZoneProtocol {
   }
 }
 
-module.exports = DropZoneProtocol;
+module.exports = { Server };
