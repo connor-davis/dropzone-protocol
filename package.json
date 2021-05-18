@@ -24,6 +24,8 @@
     "hyproxy": "^0.2.1",
     "moment": "^2.29.1",
     "ndjson": "^2.0.0",
+    "socket.io": "^4.1.2",
+    "socket.io-client": "^4.1.2",
     "sodium-universal": "^3.0.4",
     "uuid": "^8.3.2"
   },
