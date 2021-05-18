@@ -1,6 +1,7 @@
 {
   "name": "@connor-davis/dropzone-protocol",
-  "version": "1.0.2",
+  "description": "This software uses a proxy software built on the hypercore-protocol to establish http connections and socket connections.",
+  "version": "1.0.3",
   "main": "index.js",
   "license": "MIT",
   "author": {
