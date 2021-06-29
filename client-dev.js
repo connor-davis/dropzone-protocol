@@ -1,8 +1,10 @@
-let { Client, SocketClient } = require('.');
+let { HttpClient, SocketClient } = require('.');
+let openports = require('openports');
 
-(async () => {
-  let client = await Client({
+openports(2, async (error, ports) => {
+  let client = await HttpClient({
     serverKey: 'connordavis',
+    port: ports[0],
   });
 
   setTimeout(() => {
@@ -13,7 +15,8 @@ let { Client, SocketClient } = require('.');
 
   let socketClient = await SocketClient({
     serverKey: 'connordavis-socket',
+    port: ports[1],
   });
 
   socketClient.on('ping', () => socketClient.emit('pong'));
-})();
+});
