@@ -1,4 +1,4 @@
-let { Server, SocketServer } = require('./lib/server');
-let { Client, SocketClient } = require('./lib/client');
+let { ExpressServer, SocketServer } = require('./lib/server');
+let { HttpClient, SocketClient } = require('./lib/client');
 
-module.exports = { Server, SocketServer, Client, SocketClient };
+module.exports = { ExpressServer, SocketServer, HttpClient, SocketClient };
