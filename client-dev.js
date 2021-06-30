@@ -3,20 +3,19 @@ let openports = require('openports');
 
 openports(2, async (error, ports) => {
   let client = await HttpClient({
-    serverKey: 'connordavis',
+    serverKey: 'connordavis.co.za',
     port: ports[0],
   });
 
-  setTimeout(() => {
-    client.get('/').then((response) => {
-      console.log('Response from server', response.data);
-    });
-  }, 100);
-
   let socketClient = await SocketClient({
-    serverKey: 'connordavis-socket',
+    serverKey: 'connordavis.co.za-socket',
     port: ports[1],
   });
 
-  socketClient.on('ping', () => socketClient.emit('pong'));
+  socketClient.on('ping', () => {
+    socketClient.emit('pong');
+    client.get('/').then((response) => {
+      console.log('Response from server', response.data);
+    });
+  });
 });

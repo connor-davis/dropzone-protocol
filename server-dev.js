@@ -3,7 +3,7 @@ let openports = require('openports');
 
 openports(2, async (error, ports) => {
   let server = new ExpressServer({
-    serverKey: 'connordavis',
+    serverKey: 'connordavis.co.za',
     port: ports[0],
   });
 
@@ -21,7 +21,7 @@ openports(2, async (error, ports) => {
   server.listen();
 
   let socketServer = new SocketServer({
-    serverKey: 'connordavis-socket',
+    serverKey: 'connordavis.co.za-socket',
     port: ports[1],
   });
 
