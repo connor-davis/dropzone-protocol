@@ -1,4 +1,4 @@
-let { ExpressServer, SocketServer } = require('./lib/server');
-let { HttpClient, SocketClient } = require('./lib/client');
+let { DropZoneServer } = require('./lib/server');
+let { DropZoneClient } = require('./lib/client');
 
-module.exports = { ExpressServer, SocketServer, HttpClient, SocketClient };
+module.exports = { DropZoneServer, DropZoneClient };
